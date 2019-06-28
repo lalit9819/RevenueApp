@@ -1,0 +1,14 @@
+ion-content{
+    .scroll-content{
+        overflow : hidden;
+    }
+    position: relative;
+}
+
+.loginBox{
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    left: 0px; right: 0px; top: 0;bottom: 0;
+    margin:auto;
+}

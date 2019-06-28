@@ -1,0 +1,8 @@
+{
+  "name": "RevenueApp",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

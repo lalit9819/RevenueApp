@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab One
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+ <ion-content>
+ <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h1>Unbillable Charts</h1>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col class="col col-80">
+              <ion-segment>
+                  <ion-segment-button value="pending" enable>
+                    <ion-label>Pending</ion-label>
+                  </ion-segment-button>
+
+                  <ion-segment-button value="historic">
+                    <ion-label>Historic</ion-label>
+                  </ion-segment-button>
+                </ion-segment>
+          </ion-col>
+          <!-- <ion-col class="col col-20">
+              <ion-icon name="refresh" padding></ion-icon>
+          </ion-col> -->
+        </ion-row>
+        <ion-row>
+          <ion-col>
+
+            <ion-list>
+              <ion-item *ngFor = "let b of apiBillList" (click)='onListItemClick()'>
+                 <ion-label position="stacked">DOS: {{b.date}}</ion-label>
+                 <ion-label position="stacked">Visit No: {{b.visitNo}}</ion-label>
+                 <ion-label position="stacked">MRN: {{b.mrn}}</ion-label>
+                 <ion-label position="stacked">Patient:{{b.patientName}}</ion-label>
+                 <ion-label position="stacked"><b>Missing:{{b.missingNote}}</b></ion-label>
+                 <div margin>
+                    <ion-button>Resolved</ion-button>
+                    <ion-button>Reply</ion-button>
+                 </div>
+              </ion-item>
+            </ion-list>
+
+          </ion-col>
+        </ion-row>
+    </ion-grid> 
+</ion-content> 

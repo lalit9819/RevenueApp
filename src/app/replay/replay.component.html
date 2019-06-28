@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><b>Replay</b></ion-title>
+    <ion-buttons slot="primary" slot="end">
+      <ion-button (click)="onCancel()">
+          <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+          <b>Select from Templates</b>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-list>
+            <ion-item *ngFor = "let replay of replayList" (click)='onListItemClick(replay)'>
+                <ion-label>{{ replay }}</ion-label>
+                <ion-icon name="arrow-forward" size="small" slot="end"></ion-icon>
+              </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>
